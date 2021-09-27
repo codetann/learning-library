@@ -6,7 +6,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "ts": "tsc --noemit",
+    "start": "npm run ts && parcel index.html"
   },
   "author": "",
   "license": "ISC",
