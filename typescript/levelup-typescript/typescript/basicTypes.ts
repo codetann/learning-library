@@ -1,3 +1,7 @@
+/**
+ * ! BASIC TYPES
+ */
+
 // boolean
 const isOpen: boolean = false;
 
@@ -20,11 +24,27 @@ enum Job {
   PM,
 }
 
-const job: Job = Job.WebDev;
-
 // any
 const phone: any = "Pixel";
 const table: any = 3;
 
 // null / undefined
-const noValue: null = null;
+let dog;
+dog = "hi";
+dog = null;
+dog = 12;
+
+/**
+ * ! ADVANCED TYPES
+ */
+
+// implicit types
+let nameOne = "Tanner";
+let nameTwo = nameOne; // name two has to be a string
+
+// union types
+let isNumOrStr: string | number = 20;
+
+const margin = (x: string | number): string => {
+  return `margin ${x}px`;
+};

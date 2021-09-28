@@ -1,26 +1,24 @@
-/* 1. JS FUNCTION */
-const sayHello = () => {
-  console.log("hello");
-};
+// interface Person {
+//   name: string;
+//   age?: number;
+// }
 
-/* 2. TS FUNCTION */
-const toNumber = (word: string): number => {
-  return +word;
-};
+// function print({ name, age }: Person): Person {
+//   console.log(name);
+//   return { name };
+// }
 
-/* 3. PARAMETERS */
-// ? for optional params
-const logWord = (word?: string): string => {
-  return word || "no word given";
-};
+// print({ name: "tanner", age: 55 });
+// // print({ age: 55, name: "mike" });
 
-// default params
-const logNumber = (num = 15): number => {
-  return num;
-};
+interface Dog {
+  name: string;
+  age?: number;
+}
 
-// rest params
-const logAll = (first = "hello", ...rest: any): string => {
-  console.log(rest);
-  return first;
-};
+function createDog({ name, age }: Dog): Dog {
+  return { name, age };
+}
+
+const digger = createDog({ name: "digger", age: 55 });
+console.log(digger);
