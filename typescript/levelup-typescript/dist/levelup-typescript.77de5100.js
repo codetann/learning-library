@@ -122,14 +122,44 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 var sayHello = function sayHello() {
   console.log("hello");
-};
+}; // basic ts function
+
 
 var toNumber = function toNumber(word) {
-  console.log(word);
   return +word;
+}; // optional parameters
+// ? for optional params
+
+
+var logWord = function logWord(word) {
+  return word || "no word given";
+}; // default params
+
+
+var logNumber = function logNumber(num) {
+  if (num === void 0) {
+    num = 15;
+  }
+
+  return num;
 };
 
-toNumber("33");
+var logAll = function logAll(first) {
+  if (first === void 0) {
+    first = "hello";
+  }
+
+  var rest = [];
+
+  for (var _i = 1; _i < arguments.length; _i++) {
+    rest[_i - 1] = arguments[_i];
+  }
+
+  console.log(rest);
+  return first;
+};
+
+logAll("hi", 1, 2, 3);
 },{}],"../../../../.nvm/versions/node/v16.5.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -158,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38703" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44803" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
