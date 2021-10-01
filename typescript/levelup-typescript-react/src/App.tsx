@@ -11,7 +11,9 @@ function App() {
           e.preventDefault();
           console.log(e);
         }}
-      />
+      >
+        Hello world
+      </Button>
       <header className="App-header"></header>
     </div>
   );
