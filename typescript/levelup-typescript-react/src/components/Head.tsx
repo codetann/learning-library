@@ -1,10 +1,10 @@
 interface Props {
-  title: string | number;
-  isActive?: boolean;
   info: {
     name: string;
     age: number;
   };
+  isActive?: boolean;
+  title: string | number;
 }
 
 export default function Head({ title, isActive = false, info }: Props) {

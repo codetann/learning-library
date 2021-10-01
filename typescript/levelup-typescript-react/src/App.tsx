@@ -12,7 +12,7 @@ function App() {
           console.log(e);
         }}
       >
-        Hello world
+        <h1>hi</h1>
       </Button>
       <header className="App-header"></header>
     </div>
